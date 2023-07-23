@@ -77,3 +77,9 @@ Source Minter contract Address: 0xFccB23456a6D4e6279F567A4Ef445b6169223ff5
 
 Destination chain: avalancheFuji
 Destination Minter contract Address: 0xF1516575dC6d79486AD78E8c596542416F333044
+
+npx hardhat deploy-destination-minter --network avalancheFuji
+
+npx hardhat deploy-source-minter --network polygonMumbai 
+
+npx hardhat cross-chain-mint --source-minter 0xFccB23456a6D4e6279F567A4Ef445b6169223ff5 --source-blockchain polygonMumbai --destination-blockchain avalancheFuji --destination-minter 0xF1516575dC6d79486AD78E8c596542416F333044 --pay-fees-in Native
